@@ -207,8 +207,35 @@
             text-shadow: 0 0 8px rgba(255, 183, 3, 0.3);
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             font-weight: bold;
+        }
+
+        /* Clickable CA Token Bar Elements */
+        .ca-container-bar {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px dashed var(--cyber-gold);
+            padding: 12px 20px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            max-width: 100%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .ca-container-bar:hover {
+            background: rgba(255, 183, 3, 0.1);
+            border-style: solid;
+        }
+        .ca-text-hash {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: clamp(0.7rem, 2.2vw, 0.95rem);
+            color: var(--matrix-green);
+            letter-spacing: 1px;
+            word-break: break-all;
         }
 
         /* Professional Content Terminal Cards */
@@ -565,7 +592,6 @@
 
     <div class="bg-grid"></div>
 
-    <!-- Navigation Header Layout -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">KANGAROO JACK 🦘</a>
@@ -586,12 +612,19 @@
         </div>
     </nav>
 
-    <!-- Main Viewport Interface -->
     <section class="hero-section" id="story">
         <img src="photo_2026-06-21_11-39-06.jpg" class="hero-character-frame" alt="Kangaroo Jack Main Character">
         
         <h1 class="main-title">$KJACK</h1>
         <p class="hero-subtitle">The Official Aussie Icon Infrastructure On Moonshot</p>
+
+        <div class="mb-4 text-center px-2">
+            <div class="ca-container-bar" onclick="copyContractAddress()" title="Click to copy Contract Address">
+                <span style="color: var(--cyber-gold); font-size: 0.85rem; font-weight: 900; font-family: 'Orbitron';">CA:</span>
+                <span id="contractAddressText" class="ca-text-hash">8xRi7TL9QpUroJbcd6o587hABwzm8xwxfHnLStHrmoon</span>
+                <svg width="16" height="16" fill="var(--text-muted-cyber)" viewBox="0 0 24 24" id="copySvgIcon"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+            </div>
+        </div>
 
         <div class="social-buttons-container">
             <a href="https://x.com/kjack2026?s=21" target="_blank" class="social-svg-link x-link" aria-label="X Link">
@@ -614,7 +647,6 @@
         </div>
     </section>
 
-    <!-- Global Node Telemetry Scrolling Ticker -->
     <div class="ticker-wrap">
         <div class="ticker">
             <div class="ticker-item">NETWORK STATE: <span>ACTIVE</span></div>
@@ -622,7 +654,6 @@
             <div class="ticker-item">DEPLOYMENT MATRIX: <span>MOONSHOT VERIFIED</span></div>
             <div class="ticker-item">COMMUNITY STRENGTH: <span>MAXIMUM VELOCITY</span></div>
             <div class="ticker-item">GLOBAL FEES: <span>0% CONTRACT TAX</span></div>
-            <!-- Duplicated row to guarantee seamless endless loop transition -->
             <div class="ticker-item">NETWORK STATE: <span>ACTIVE</span></div>
             <div class="ticker-item">LIQUIDITY CONDITION: <span>100% LOCKED</span></div>
             <div class="ticker-item">DEPLOYMENT MATRIX: <span>MOONSHOT VERIFIED</span></div>
@@ -631,10 +662,8 @@
         </div>
     </div>
 
-    <!-- Professional Utility & Procurement Section -->
     <section class="container py-5" id="procurement">
         <div class="row g-4">
-            <!-- Strategic Integration: Procurement Framework -->
             <div class="col-lg-6 col-12">
                 <div class="cyber-card">
                     <h3 class="card-accent-title">
@@ -657,46 +686,15 @@
                     <div class="step-node">
                         <div class="step-number">03</div>
                         <h4 class="step-title">Bind Target Allocation</h4>
-                        <p class="step-text">Connect to Moonshot, track the official ticker verification symbol, and authorize the smart-contract swap execution instantly.</p>
+                        <p class="step-text">Connect to Moonshot, search or bind the contract address tracker code, and authorize the smart-contract swap execution instantly.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Strategic Integration: Live Token Diagnostics -->
-            <div class="col-lg-6 col-12">
-                <div class="cyber-card">
-                    <h3 class="card-accent-title">
-                        <svg width="22" height="22" fill="var(--cyber-gold)" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-                        SYSTEM DIAGNOSTICS & TELEMETRY
-                    </h3>
-                    <p class="small text-muted-cyber mb-4">Real-time parameters derived dynamically directly from verified node conditions.</p>
-                    
-                    <div class="metric-row">
-                        <span class="metric-label">System Deployment Base</span>
-                        <span class="metric-value">Solana Architecture</span>
-                    </div>
-                    <div class="metric-row">
-                        <span class="metric-label">Allocation Mechanics</span>
-                        <span class="metric-value highlight">100% Fair Distribution</span>
-                    </div>
-                    <div class="metric-row">
-                        <span class="metric-label">Liquidity Architecture</span>
-                        <span class="metric-value">Locked Protocol State</span>
-                    </div>
-                    <div class="metric-row">
-                        <span class="metric-label">Target Milestones Terminal</span>
-                        <span class="metric-value highlight">1 Billion Cap Objective</span>
-                    </div>
-
-                    <div class="mt-4 text-center">
-                        <a href="https://t.me/Kjackchat" target="_blank" class="cta-btn w-100 text-center">Execute Swap Terminal</a>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </section>
 
-    <!-- NEW SECTION: Interactive ROI Milestone Projection Simulator Center -->
     <section class="container py-5" id="projection-center">
         <div class="cyber-card">
             <h3 class="card-accent-title">
@@ -743,14 +741,12 @@
         </div>
     </section>
 
-    <!-- Expanded Media Vault Section -->
     <section class="container py-5" id="vault">
         <div class="text-center mb-5">
             <h2 class="section-hub-title">:: SYSTEM_MEME_LEDGER ::</h2>
             <p class="font-monospace fw-bold text-muted-cyber">High-fidelity visual protocols deployed from the outback sector</p>
         </div>
         
-        <!-- Row 1: Meme Expansion Block A -->
         <div class="row g-4 justify-content-center mb-4">
             <div class="col-xl-4 col-md-6 col-12">
                 <div class="comic-frame">
@@ -789,7 +785,6 @@
             </div>
         </div>
 
-        <!-- Row 2: Meme Expansion Block B -->
         <div class="row g-4 justify-content-center mb-4">
             <div class="col-xl-4 col-md-6 col-12">
                 <div class="comic-frame">
@@ -828,7 +823,6 @@
             </div>
         </div>
 
-        <!-- Row 3: Meme Expansion Block C -->
         <div class="row g-4 justify-content-center">
             <div class="col-xl-3 col-md-6 col-12">
                 <div class="comic-frame">
@@ -880,7 +874,6 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: System Roadmap & Milestone Tracker (Epileptic Phase Matrix) -->
     <section class="container py-5" id="roadmap">
         <div class="text-center mb-5">
             <h2 class="section-hub-title">:: SYSTEM PIPELINE MATRIX ::</h2>
@@ -892,7 +885,7 @@
                 <div class="roadmap-node-card active-phase">
                     <span class="badge bg-warning text-dark font-monospace mb-2">PHASE 1: LIVE INCEPTION</span>
                     <h4 class="font-monospace text-light fw-bold">Ecosystem Genesis Protocols</h4>
-                    <p class="small text-muted-cyber">Deploy full token framework directly via Moonshot pooling architecture. Ensure absolute contract balance verifiability and structural decentralization parameters are initiated instantly.</p>
+                    <p class="small text-muted-cyber">Deploy full token framework directly via Moonshot pooling architecture. Ensure absolute contract address verifiability and structural decentralization parameters are initiated instantly.</p>
                 </div>
             </div>
             <div class="col-md-6 col-12">
@@ -919,7 +912,6 @@
         </div>
     </section>
 
-    <!-- Professional Architecture Manifesto Section -->
     <section class="container py-5" id="manifesto">
         <div class="row g-4">
             <div class="col-lg-6 col-12">
@@ -966,7 +958,6 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: FAQ Architectural Matrix Accordion Layout -->
     <section class="container py-5" id="faq">
         <div class="text-center mb-5">
             <h2 class="section-hub-title">:: SYSTEM RESOLUTIONS (FAQ) ::</h2>
@@ -1021,11 +1012,27 @@
 
     <footer>
         <p class="font-monospace mb-2" style="color: var(--cyber-gold); font-weight: 700;">$KJACK — Paving the Way to Success for Everyone.</p>
-        <p class="small mb-0" style="color: var(--text-muted-cyber);">&copy; 2026 Kangaroo Jack Coin. Built honestly on Moonshot.</p>
+        <p class="small mb-0" style="color: var(--text-muted-cyber);">&copy; 2026 Kangaroo Jack Coin. Built honestly on Moonshot with CA: 8xRi7TL9QpUroJbcd6o587hABwzm8xwxfHnLStHrmoon.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Copy to clipboard functional matrix
+        function copyContractAddress() {
+            const caString = document.getElementById('contractAddressText').innerText;
+            navigator.clipboard.writeText(caString).then(() => {
+                const bar = document.querySelector('.ca-container-bar');
+                const originalBorder = bar.style.borderColor;
+                bar.style.borderColor = "var(--matrix-green)";
+                alert("Contract Address Copied to Clipboard Securely!");
+                setTimeout(() => {
+                    bar.style.borderColor = originalBorder;
+                }, 1000);
+            }).catch(err => {
+                console.error('Could not copy string: ', err);
+            });
+        }
+
         // System Interactive Core Math Framework for the Simulator Terminal
         const inputTokens = document.getElementById('tokenCountInput');
         const selectedCap = document.getElementById('capMilestoneSelect');
